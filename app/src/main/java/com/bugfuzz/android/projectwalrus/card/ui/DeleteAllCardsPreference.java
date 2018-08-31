@@ -54,7 +54,9 @@ public class DeleteAllCardsPreference extends DialogPreference {
             return new MaterialDialog.Builder(getActivity())
                     .title(R.string.warning)
                     .titleColorRes(R.color.secondaryColor)
+                    .backgroundColorRes(R.color.white)
                     .content(R.string.delete_all_cards)
+                    .contentColorRes(R.color.grey)
                     .positiveText(R.string.delete_button)
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
@@ -78,8 +80,8 @@ public class DeleteAllCardsPreference extends DialogPreference {
                             dialog.dismiss();
                         }
                     })
-                    .negativeText(R.string.cancel_button)
-                    .onNegative(new MaterialDialog.SingleButtonCallback() {
+                    .neutralText(R.string.cancel_button)
+                    .onNeutral(new MaterialDialog.SingleButtonCallback() {
                         @Override
                         public void onClick(@NonNull MaterialDialog dialog,
                                 @NonNull DialogAction which) {

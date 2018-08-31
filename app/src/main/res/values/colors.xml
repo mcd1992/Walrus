@@ -26,6 +26,8 @@
     <color name="secondaryColor">#c11700</color>
     <color name="secondaryLightColor">#fc542f</color>
     <color name="secondaryDarkColor">#890000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#212121</color>
 
     <color name="primaryCardTextColor">#212121</color>
     <color name="primaryCardBackground">#cfd8dc</color>

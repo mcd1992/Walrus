@@ -36,8 +36,8 @@
     </style>
 
     <style name="AppPreference.SettingActivity"  parent="Theme.AppCompat.Light">
-        <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textColor">#212121</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/grey</item>
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/primaryDarkColor</item>
