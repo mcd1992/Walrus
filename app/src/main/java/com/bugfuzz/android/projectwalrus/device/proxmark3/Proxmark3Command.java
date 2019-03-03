@@ -33,6 +33,7 @@ import java.nio.ByteOrder;
 import java.util.Arrays;
 
 class Proxmark3Command {
+    // See usb_cmd.h for more commands
 
     static final long ACK = 0xff;
     static final long DEBUG_PRINT_STRING = 0x100;

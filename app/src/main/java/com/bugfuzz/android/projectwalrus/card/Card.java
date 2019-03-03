@@ -21,8 +21,6 @@ package com.bugfuzz.android.projectwalrus.card;
 
 import android.location.Location;
 
-import com.bugfuzz.android.projectwalrus.R;
-import com.bugfuzz.android.projectwalrus.WalrusApplication;
 import com.bugfuzz.android.projectwalrus.card.carddata.CardData;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
@@ -31,6 +29,8 @@ import com.j256.ormlite.table.DatabaseTable;
 import org.parceler.Parcel;
 
 import java.util.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 @DatabaseTable()
 @Parcel
@@ -61,7 +61,10 @@ public class Card {
     public Double cardLocationLng;
 
     public Card() {
-        name = WalrusApplication.getContext().getString(R.string.default_card_name);
+        // Use a timestamp for the default name
+        Date curtime = Calendar.getInstance().getTime();
+        SimpleDateFormat ftime = new SimpleDateFormat("yyyy-MM-dd:HH-mm-ss");
+        name = ftime.format(curtime);
     }
 
     public Card(String name, CardData cardData, Date cardCreated, Date cardDataAcquired,
